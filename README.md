@@ -38,5 +38,11 @@ The app would have to display an authenticated user profile as well as match opt
 - Feature Tasks - Implement attractive bootstrap styling
 - Acceptance Tests - Collect feedback from our practice sessions, and adjust accordingly.
 
-# Data Models
-[Data Schema Draft 2](DBDataModels_v2.jpg)
+# Wireframe, Data, and Domain Models
+[Wireframe](wireframe.jpg)
+
+[Data Schema Draft 2](dataModels_draft3.jpg)
+
+[Domain Model Frontend](domainModelFrontend.jpg)
+
+[Domain Model Backend](domainModelBackend.jpg)
