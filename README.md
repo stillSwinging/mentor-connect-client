@@ -3,6 +3,10 @@
 
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
+**Deployment Links**:
+Client (Netlify): https://mentor-connect.netlify.app/  (VP)
+Server (Heroku):
+
 # Project start date: 6-14-2022
 
 ## Summary of idea: 
@@ -16,11 +20,16 @@ What is the minimum required for you to present on your demo day?
 The app would have to display an authenticated user profile as well as match options from our database. Mentors previously worked with will be displayed upon login.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+In order to build this app on their own machine and get it running, user should:
+* clone the github repo locally
+* create a .env and seed it with a MongoDB connection link and password
+* npm install
+* npm start (to launch)
+* npm i mongoose
+* npm seed.js (to send seed data for testing)
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
+Technologies used: JSx, JavaScript, React-Bootstrap, Localhost, GitHub, Netlify (client deployment), Heroku (server deployment), expressJS, node.js, MongoDB, Mongoose, axios.
 
 # User Stories
 
@@ -60,12 +69,13 @@ The app would have to display an authenticated user profile as well as match opt
 
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+6/14/2022: initiated project, started wireframing, data, and domain modeling
+6/15/2022: created client repo and initiated setup, collaborated on design, color, and accessibility goals
+6/16/2022: created server, started coding frontend
 
 ## Credit, Collaborations, and Resources
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+* Unsplash
+* Hexx King - special thanks for helping us resolve Git issues and questions
 
 ## Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
