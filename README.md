@@ -40,5 +40,3 @@ The app would have to display an authenticated user profile as well as match opt
 
 # Data Models
 [Data Schema Draft 2](DBDataModels_v2.jpg)
-
-testing testing.
