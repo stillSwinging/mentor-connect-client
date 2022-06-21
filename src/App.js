@@ -9,11 +9,9 @@ import Mission from './Components/Mission';
 import SignUp from './Components/SignUp';
 import User from './Components/User';
 import axios from 'axios';
-// import Simple from './Simple';
 // import User from './User';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import NavBar from './NavBar';
 
 
 class App extends React.Component {
@@ -64,16 +62,19 @@ class App extends React.Component {
           <Route
             path="/signup"
             element={<SignUp />} />
+<<<<<<< Updated upstream
           <Route
             path="/user"
             element={<User />} />
           <Route
+=======
+          {/* <Route
+>>>>>>> Stashed changes
             path="/footer"
-            element={<Footer />} />
+            element={<Footer />} /> */}
         </Routes>
-
+        <Footer />
       </Router>
-
     );
   }
 }
