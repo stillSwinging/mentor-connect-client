@@ -7,6 +7,7 @@ import Body from './Components/Body';
 import Footer from './Components/Footer';
 import Mission from './Components/Mission';
 import SignUp from './Components/SignUp';
+import User from './Components/User';
 import axios from 'axios';
 // import Simple from './Simple';
 // import User from './User';
@@ -40,10 +41,11 @@ class App extends React.Component {
     return (
 
       <Router>
-       
         <Header />
-
         <Routes>
+          <Route
+            path="/"
+            element={<Home />} />
           <Route
             path="/home"
             element={<Home />} />
@@ -62,7 +64,9 @@ class App extends React.Component {
           <Route
             path="/signup"
             element={<SignUp />} />
-
+          <Route
+            path="/user"
+            element={<User />} />
           <Route
             path="/footer"
             element={<Footer />} />
@@ -76,41 +80,3 @@ class App extends React.Component {
 
 
 export default App;
-
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Home from './routes/Home';
-// import Header from './Components/Header';
-// import Body from './Components/Body';
-// import Footer from './Components/Footer';
-// import Simple from './Components/Simple';
-// import User from './Components/User';
-// import Profile from './auth/Profile';
-// class App extends React.Component {
-//   render() {
-//     return (
-
-//       <Router>
-//         <Header />
-//         <Body />
-//         {/* <User /> */}
-//         <Simple />
-//         <Footer />
-//         <Routes>
-//           <Route
-//             path="/"
-//             element={<Home />} />
-//           <Route
-//             path="/"
-//             element={<Profile />} />
-//           <Route
-//             path="/"
-//             element={<User />} />
-//         </Routes>
-//       </Router>
-//     );
-//   }
-// }
-
-// export default App;

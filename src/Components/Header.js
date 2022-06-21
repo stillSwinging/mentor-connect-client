@@ -2,6 +2,10 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import '../CSS/Header.css';
+import Login from '../auth/Login';
+import Logout from '../auth/Logout';
+import Profile from '../auth/Profile';
+import { withAuth0 } from '@auth0/auth0-react';
 
 
 class Header extends React.Component {
@@ -20,11 +24,16 @@ class Header extends React.Component {
           </Nav>
 
         </Container>
+        <>
+          <Login />
+          <Logout />
+          <Profile />
+        </>
       </Navbar>
     );
   }
 }
-export default Header;
+export default withAuth0(Header);
 
 
 // import React from 'react';
