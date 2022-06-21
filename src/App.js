@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import Home from './Home';
-import Header from './Header';
-import About from './About';
-import Body from './Body';
-import Footer from './Footer';
-import Mission from './Mission';
-import SignUp from './SignUp';
+import './CSS/App.css';
+import Home from './Components/Home';
+import Header from './Components/Header';
+import About from './Components/About';
+import Body from './Components/Body';
+import Footer from './Components/Footer';
+import Mission from './Components/Mission';
+import SignUp from './Components/SignUp';
 import axios from 'axios';
 // import Simple from './Simple';
 // import User from './User';
@@ -40,6 +40,7 @@ class App extends React.Component {
     return (
 
       <Router>
+       
         <Header />
 
         <Routes>
