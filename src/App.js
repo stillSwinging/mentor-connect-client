@@ -13,6 +13,9 @@ import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// comments from Tanesha Brester
+// keep header and footer outside of the route if you want your header to show up on every pages, do not wrap it in a route
+// in order to keep the body and the simple.js in a route tag with a route to tell it which route that component should render
 
 class App extends React.Component {
 

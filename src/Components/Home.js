@@ -5,8 +5,6 @@ import '../CSS/Home.css';
 import { Image } from 'react-bootstrap';
 
 
-
-
 class Home extends React.Component {
   render() {
     return (
