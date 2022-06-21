@@ -7,6 +7,7 @@ import Body from './Body';
 import Footer from './Footer';
 import Mission from './Mission';
 import SignUp from './SignUp';
+import axios from 'axios';
 // import Simple from './Simple';
 // import User from './User';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -15,6 +16,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component {
+
+  constructor(props) { // I think this constructor actually belongs on the userInfo card that MQR is coding. Move as appropriate. (VP 6/19/2022)
+    super(props);
+    this.state = {
+      resultingUserList: [] // (VP 6/19/2022)
+    };
+  }
+
+  getMentors = async () => { // (VP 6/19/2022)
+    const url = process.env.REACT_APP_API;
+    const resultingUserList = await axios.get(`${url}/userInfo?type=mentor`);
+    console.log(resultingUserList);
+  };
+
+  getStudents = async () => { // (VP 6/19/2022)
+    const url = process.env.REACT_APP_API;
+    const resultingUserList = await axios.get(`${url}/userInfo?type=student`);
+    console.log(resultingUserList);
+  };
+
   render() {
     return (
 
