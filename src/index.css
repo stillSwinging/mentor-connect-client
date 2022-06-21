@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,700&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Raleway:wght@200;400;500;600;700;800&display=swap');
+
 * {
 
   box-sizing: border-box;
   margin: 0;
-  padding:0;
+  padding: 0;
 
 }
-h1, p{
-  color: white;
+
+
+p {
+  color: black;
 }
 
 body {
@@ -25,7 +28,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.btn{
+
+.btn {
   padding: 12px 32px;
   font-size: 1.2rem;
   /* text-tranform: uppercase; */
@@ -34,9 +38,11 @@ code {
   border: 1px solid #fff;
   cursor: pointer;
 }
+
 .btn-light {
-  background: rgba (255,255,255, .2);
+  background: rgba (255, 255, 255, .2);
 }
+
 .btn:hover {
-  background: rgba (255,255,255, .2);
+  background: rgba (255, 255, 255, .2);
 }
