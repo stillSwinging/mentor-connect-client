@@ -3,11 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module",
-<<<<<<< Updated upstream
     "ecmaFeatures":"jsx"
-=======
-    "ecmaFeatures": {"jsx": true}
->>>>>>> Stashed changes
   },
   "env": {
     "es6": true,

@@ -1,17 +1,10 @@
-import React from 'react';
-import './MissionAndVision.css';
-
-// import Modal from 'react-bootstrap/Modal';
+import React from 'react-bootstrap';
 
 class Mission extends React.Component {
   render() {
     return (
-      // parent element needed for jsx (i just used fragments)
-      <>
-        <h1>Title testing testing</h1>
-        <h2>Mission and Vision</h2>
-      </>
-    );
+      <h1>Title testing testing</h1>
+    )
   }
 }
 
