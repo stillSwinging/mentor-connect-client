@@ -3,9 +3,9 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import '../CSS/About.css';
 
-class About extends React.Component {
+class About extends React.Component { // creating AboutUs react class component -Tanesha Brester
   render() {
-    return (
+    return ( // parent element needed for jsx (i just used fragments) -Tanesha Brester
       <>
         <h1>Team stillSwinging </h1>
         <CardGroup className='about'>
