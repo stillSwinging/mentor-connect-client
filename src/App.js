@@ -40,12 +40,7 @@ class App extends React.Component {
           <Route
             path="/signup"
             element={<SignUp />} />
-          {/* <Route
-            path="/simple"
-            element={<Simple />} /> */}
-          {/* <Route
-            path="/user"
-            element={<User />} /> */}
+
           <Route
             path="/footer"
             element={<Footer />} />
