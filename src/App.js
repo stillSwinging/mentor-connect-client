@@ -62,16 +62,9 @@ class App extends React.Component {
           <Route
             path="/signup"
             element={<SignUp />} />
-<<<<<<< Updated upstream
           <Route
             path="/user"
             element={<User />} />
-          <Route
-=======
-          {/* <Route
->>>>>>> Stashed changes
-            path="/footer"
-            element={<Footer />} /> */}
         </Routes>
         <Footer />
       </Router>
