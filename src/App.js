@@ -21,7 +21,16 @@ class App extends React.Component {
   constructor(props) { // I think this constructor actually belongs on the userInfo card that MQR is coding. Move as appropriate. (VP 6/19/2022)
     super(props);
     this.state = {
-      resultingUserList: [] // (VP 6/19/2022)
+      resultingUserList: [], // (VP 6/19/2022)
+      firstName: '',
+      lastName: '',
+      email: '',
+      YOB: '',
+      type: '',
+      interest: '',
+      timeZone: '',
+      avatar: '',
+      student: []
     };
   }
 
@@ -36,6 +45,20 @@ class App extends React.Component {
     const resultingUserList = await axios.get(`${url}/userInfo?type=student`);
     console.log(resultingUserList);
   };
+
+  handleChange = (e) => {
+    e.preventDefault();
+    this.setState({
+      firstName: e.target.value,
+      lastName: e.target.value,
+      email: e.target.value,
+      interest: e.target.value,
+      timeZone: e.target.value
+    }, () => console.log(this.state.firstName));
+  };
+
+
+
 
   render() {
     return (
@@ -63,7 +86,9 @@ class App extends React.Component {
             element={<Mission />} />
           <Route
             path="/signup"
-            element={<SignUp />} />
+            element={<SignUp
+              handleChange={this.handleChange}
+            />} />
           <Route
             path="/user"
             element={<User />} />

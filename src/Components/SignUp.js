@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 
@@ -7,15 +7,6 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      YOB: '',
-      type: '',
-      interest: '',
-      timeZone: '',
-      avatar: '',
-      student: []
     };
   }
 
@@ -30,15 +21,16 @@ class SignUp extends React.Component {
   //     this.setState({ student: response.data })
   //     const response = await axios(config)
   //     // axios gives us what we want in a property called 'data'
-  //     console.log(response.data); //we are expecting to see the array of the mentor info I believe, need to test. referrencing can-of-books full demo 06-10-22 at 1:00:00 - 1:06:46, MQR(06-21-22) 
+  //     console.log(response.data); //we are expecting to see the array of the mentor info I believe, need to test. referrencing can-of-books full demo 06-10-22 at 1:00:00 - 1:06:46, MQR(06-21-22)
   //   } catch (error) {
   //     console.error('Error in SignUp componentDidMount function: ', error);
   //   }
   // }
 
 
-
-
+  // redirecting. this would go inside the callback function enter this at the END of function.
+  //location.href= '/user';
+  //handle submit or handle onclick.
 
 
   // FormExample = () => {
@@ -72,6 +64,7 @@ class SignUp extends React.Component {
                 required
                 type="text"
                 placeholder="First name"
+                onChange={this.props.handleChange}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -81,12 +74,16 @@ class SignUp extends React.Component {
                 required
                 type="text"
                 placeholder="Last name"
+                onChange={this.props.handleChange}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} controlId="formGridEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                onChange={this.props.handleChange} />
             </Form.Group>
           </Row>
           <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -95,6 +92,7 @@ class SignUp extends React.Component {
               required
               type="text"
               placeholder="Year of Birth"
+
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
@@ -104,6 +102,7 @@ class SignUp extends React.Component {
               required
               type="text"
               placeholder="Interest"
+              onChange={this.props.handleChange}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
