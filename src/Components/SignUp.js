@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 
@@ -13,9 +14,33 @@ class SignUp extends React.Component {
       type: '',
       interest: '',
       timeZone: '',
-      avatar: ''
+      avatar: '',
+      student: []
     };
   }
+
+  //  I STARTED THIS, BUT IM NOT CONNECT TO MONGO DB SO I CANT TEST IT. LEFT NOTES BELOW.(MQR)
+  // componentDidMount = async () => {
+  //   try {
+  //     const config = {
+  //       method: 'get',
+  //       baseURL: process.env.REACT_APP_SERVER,
+  //       url: '/'
+  //     };
+  //     this.setState({ student: response.data })
+  //     const response = await axios(config)
+  //     // axios gives us what we want in a property called 'data'
+  //     console.log(response.data); //we are expecting to see the array of the mentor info I believe, need to test. referrencing can-of-books full demo 06-10-22 at 1:00:00 - 1:06:46, MQR(06-21-22) 
+  //   } catch (error) {
+  //     console.error('Error in SignUp componentDidMount function: ', error);
+  //   }
+  // }
+
+
+
+
+
+
   // FormExample = () => {
   //   const [validated, setValidated] = useState(false);
 
