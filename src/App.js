@@ -9,7 +9,6 @@ import Mission from './Components/Mission';
 import SignUp from './Components/SignUp';
 import User from './Components/User';
 import axios from 'axios';
-// import User from './User';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

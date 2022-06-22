@@ -44,3 +44,26 @@
 /* .header {
 background-color: rgb(130, 160, 160);
 } */
+
+.height{
+  max-height: 770px; 
+  /* max-width: fit-content; */
+  margin: 3%;
+ 
+}
+#image{
+  max-height: 870px;
+  padding-bottom: 50px;
+  /* opacity: .65; */
+}
+#carousel-text{
+  background-color: darkgray;
+  opacity: .85;
+   /* padding: 5%;   */
+   margin-bottom: 5%;  
+  border: 2px solid black;
+}
+.carousel-text{
+  color: black;
+  font-weight: bold;
+}

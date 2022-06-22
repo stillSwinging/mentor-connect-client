@@ -1,6 +1,6 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import '../CSS/Header.css';
 import Login from '../auth/Login';
 import Logout from '../auth/Logout';
@@ -11,16 +11,16 @@ import { withAuth0 } from '@auth0/auth0-react';
 class Header extends React.Component {
   render() {
     return (
-      <Navbar className="header" bg="light" expand="lg">
+      <Navbar className="header" bg="light" expand="lg" >
         <Container>
           <Navbar.Brand className="headerLetter" href="/home">Mentor Matcher</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle />
           <Nav className="nav-menu">
-            <Nav.Link href='/home'>Home</Nav.Link>
-            <Nav.Link href='/about'>About Us</Nav.Link>
-            <Nav.Link href='/mission'>Our Mission</Nav.Link>
-            <Nav.Link href='/signup'>Sign Up</Nav.Link>
-
+            <Nav.Link className="text" href='/home'>Home</Nav.Link>
+            <Nav.Link className="text" href='/about'>About Us</Nav.Link>
+            <Nav.Link className="text" href='/mission'>Our Mission</Nav.Link>
+            <Nav.Link className="text" href='/signup'>Sign Up</Nav.Link>
+            <Nav.Link className="text" href='/User'>User</Nav.Link>
           </Nav>
 
         </Container>
