@@ -26,22 +26,16 @@
 
 }
 
-.nav-menu a {
+.nav-menu  {
   font-weight: 500;
   color: white;
   font-size: 1rem;
   text-decoration: none;
 }
 
-.hamburger {
-  display: none;
-}
 
 @media screen and (max-width:1240px) {
-  .hamburger {
-    display: block;
-  }
-
+ 
   .nav-menu {
     position: absolute;
     flex-direction: column;
@@ -55,6 +49,7 @@
     transition: 0.3s;
     z-index: -1;
     background: rgba(0, 0, 0, .9);
+    color: white;
   }
 
   .nav-menu.active {
@@ -66,5 +61,8 @@
   }
 }
 .header{
-  background: black;
+  
+}
+.text{
+  color: white;
 }

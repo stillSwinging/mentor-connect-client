@@ -24,7 +24,7 @@ class About extends React.Component { // creating AboutUs react class component 
           <Card>
             <Card.Img className='about' variant="top" src="Images/Sarah.jpeg" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Sarah Teklemariam</Card.Title>
               <Card.Text>
                 "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
               </Card.Text>
@@ -36,11 +36,9 @@ class About extends React.Component { // creating AboutUs react class component 
           <Card>
             <Card.Img className='about' variant="top" src="holder.js/100px160" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Vida Powell</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.
+              Presently a pandemic-inspired K-2 homeschool teacher and long-time Trekkie, Vida is an avid fan of puppies of all ages and life in VR. Having completed her Bachelor of Science in Interdisciplinary Studies (English/Mathematics), Associate of Science in pure sciences, and a bartending certification back when she enjoyed leaving the house, she is currently working toward an Advanced Software Development certification in Full-Stack JavaScript.
               </Card.Text>
             </Card.Body>
             {/* <Card.Footer>
@@ -54,6 +52,8 @@ class About extends React.Component { // creating AboutUs react class component 
               <Card.Text>
                 This is a wider card with supporting text below as a natural lead-in to
                 additional content. This card has even longer content than the first to
+                show that equal height action.This is a wider card with supporting text below as a natural lead-in to
+                additional content. This card has even longer content than the first to
                 show that equal height action.
               </Card.Text>
             </Card.Body>
@@ -62,7 +62,6 @@ class About extends React.Component { // creating AboutUs react class component 
             </Card.Footer> */}
           </Card>
         </CardGroup>
-      
       </>
     );
   }
