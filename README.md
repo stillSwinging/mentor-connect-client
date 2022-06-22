@@ -4,10 +4,13 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 **Deployment Links**:
+
 Client (Netlify): https://mentor-connect.netlify.app/  (VP)
-Server (Heroku):
+
+Server (Heroku): https://mentor-connect-server.herokuapp.com/ (MQR)
 
 # Project start date: 6-14-2022
+# Project submission date: 6-25-2022
 
 ## Summary of idea: 
 An app that connects minority children with an interest in a particular career path to a mentor. We would create our own database and seed it with mentors we identify through our tech networks!
@@ -23,13 +26,12 @@ The app would have to display an authenticated user profile as well as match opt
 In order to build this app on their own machine and get it running, user should:
 * clone the github repo locally
 * create a .env and seed it with a MongoDB connection link and password
-* npm install
+* npm install dotenv express cors mongoose
 * npm start (to launch)
-* npm i mongoose
-* npm seed.js (to send seed data for testing)
+* npm userInfoSeed.js (to send seed data to MongoDB)
 
 ## Architecture
-Technologies used: JSx, JavaScript, React-Bootstrap, Localhost, GitHub, Netlify (client deployment), Heroku (server deployment), expressJS, node.js, MongoDB, Mongoose, axios.
+Technologies used: JSx, JavaScript, React-Bootstrap, Localhost, GitHub, Netlify (client deployment), Heroku (server deployment), expressJS, node.js, MongoDB, Mongoose, axios, HTML.
 
 # User Stories
 
@@ -61,30 +63,40 @@ Technologies used: JSx, JavaScript, React-Bootstrap, Localhost, GitHub, Netlify 
 # Wireframe, Data, and Domain Models
 [Wireframe](wireframe.jpg)
 
-[Data Schema Draft 3](dataModels_draft3.jpg)
-
-[Data Schema Draft 3b](dataModels_draft3b.jpg)
-
-[Domain Model Frontend_v1](domainModelFrontend.jpg)
-
-[Domain Model Backend_v1](domainModelBackend.jpg)
-
-[Domain Model Fronted & Backend Combined_v1](DmodelImages/domainModelFrontAndBackCombined_v1.jpg)
-
-[Domain Model Fronted & Backend Combined_v2](DmodelImages/combinedDomainModel_v2.jpg)
-
 [Domain Model Fronted & Backend Combined_v3](DmodelImages/combinedDomainModel_v3.jpg)
 
 [Web Request Response Cycle -Calendly & MultiAvatar](DmodelImages/WRRC%20for%20calendly%20and%20multiavatar.jpg)
 
+[Data Schema Draft 4](DmodelImages/dataModels_draft3b.jpg)
+
+_[__Data Schema Draft 3 -RETIRED](DmodelImages/dataModels_draft3.jpg)_
+
+_[__Data Schema Draft 3b -RETIRED](DmodelImages/dataModels_draft3b.jpg)_
+
+_[__Domain Model Frontend_v1 -RETIRED](DmodelImages/domainModelFrontend.jpg)_
+
+_[__Domain Model Backend_v1 -RETIRED](DmodelImages/domainModelBackend.jpg)_
+
+_[__Domain Model Fronted & Backend Combined_v1 -RETIRED](DmodelImages/domainModelFrontAndBackCombined_v1.jpg)_
+
+_[__Domain Model Fronted & Backend Combined_v2 -RETIRED](DmodelImages/combinedDomainModel_v2.jpg)_
+
 
 ## Change Log
 6/14/2022: initiated project, started wireframing, data, and domain modeling (team)
+Established [Trello Workspace: ](https://trello.com/b/7wHAjz2V/) (ST) 
+
 6/15/2022: created client repo and initiated setup (VP), collaborated on design, color, and accessibility goals (team)
+
 6/16/2022: server created (MQR), started coding frontend (team)
+
 6/17/2022: Home page coding completed with ACP to staging (by ST); created dummy json files holding parsed mentor and student data (VP)
+
 6/18/2022: Auth0.js functionality added and tested (by MQR)
+
 6/19/2022: added WRRC to documentation displaying anticipated client communication (over axios) with Calendly and MultiAvatar APIs (VP); removed the dummy json data files I had originally placed in a data folder on frontend and compressed data into a single userInfo.json and housed in /data on backend repo (VP); added combined client-server domain model vers 1-3 to documentation (VP); discovered redundancy in modeling schema and removed it by introducing a "type" property this allowed reduction in component (mentorInfo.js and studentInfo.js replaced with a single userInfo.js) and both model and seed files on backend; updated (draft version to be re-worked later) the data model and included above (VP);
+
+6/20/2022: 
 
 ## Credit, Collaborations, and Resources
 * Unsplash
@@ -92,6 +104,9 @@ Technologies used: JSx, JavaScript, React-Bootstrap, Localhost, GitHub, Netlify 
 * Tammy Do, Remo TA - with thanks for answering questions about client-server-api communication
 * Kassie Bradshaw, Remo TA - with thanks for helping us investigate linter issues
 * David Souther, Remo TA - with thanks for helping us resolve gituations and provided insight on package-lock.json update frequency and how this is commonly causes errors during deployment!
+* Audrey Patterson, CF Instructor - with thanks for explaining some of the auto-generated code blocks and how they fit together with what we are building out
+* Aaron Imbrock, Remo TA - with thanks for pointing out when trying to seed a MongoDB (in our case the userInfoSeed.js), fields that are set to "required: true" MUST have data in the quotes. 
+
 
 ## Time Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
