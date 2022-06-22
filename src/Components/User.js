@@ -14,6 +14,8 @@ class User extends React.Component {
     this.state = {
     };
   }
+
+  //pass the info as props to this user component.
   render() {
 
     return (
