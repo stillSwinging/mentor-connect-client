@@ -48,13 +48,9 @@ class About extends React.Component { // creating AboutUs react class component 
           <Card>
             <Card.Img className='about' variant="top" src="holder.js/100px160" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Tanesha Brester</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.This is a wider card with supporting text below as a natural lead-in to
-                additional content. This card has even longer content than the first to
-                show that equal height action.
+                With a diverse employment background, most recently being in healthcare, I decided to follow my dreams and pivot into tech. I went back to school in 2020, and enrolled in CodeFellows 
               </Card.Text>
             </Card.Body>
             {/* <Card.Footer>

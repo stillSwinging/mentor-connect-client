@@ -1,4 +1,30 @@
-/* from Tanesha notes
- .header {
-  background-color: rgb(8, 65, 65);
-} */
+ .body {
+  background-color: rgb(153, 199, 199);
+}
+
+h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-style: times;
+}
+
+.statement1 {
+  /* text-align: center; */
+  font-style: normal;
+  margin-bottom: 30px;
+  font-size:10px;
+  width:100%;
+  position: relative;
+  display: inline-block;
+  height: auto;
+}
+
+#statementsection {
+  margin-top: 100px;
+  text-align: center;
+  font-style: times;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+
