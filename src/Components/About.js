@@ -34,7 +34,7 @@ class About extends React.Component { // creating AboutUs react class component 
             </Card.Footer> */}
           </Card>
           <Card>
-            <Card.Img className='about' variant="top" src="holder.js/100px160" />
+            <Card.Img className='about' variant="top" src="Images/Vida.jpg" />
             <Card.Body>
               <Card.Title>Vida Powell</Card.Title>
               <Card.Text>
