@@ -14,34 +14,33 @@ class User extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: [],
-      showForm: false
+      userInfo: []
+      // showForm: false
     };
   }
 
 
   componentDidMount = async () => {
-    console.log(process.env.REACT_APP_SERVER);
+    console.log(this.props.auth0);
     try {
 
-      if (this.props.auth0.isAuthenticated) {
-        const res = await this.props.auth0.getIdTokenClaims();
-        const jwt = res.__raw;
-        console.log('token: ', jwt);
+      // if (this.props.auth0.isAuthenticated) {
+      //   const res = await this.props.auth0.getIdTokenClaims();
+      //   const jwt = res.__raw;
+      //   console.log('token: ', jwt);
 
-        const config = {
-          headers: { "Authorization": `Bearer ${jwt}` },
-          method: 'get',
-          baseURL: process.env.REACT_APP_SERVER,
-          url: '/userInfo?type=mentor'//this might need to be changed to /users 
-
-        };
-        console.log(config);
-        const response = await axios(config);
-        // axios gives us what we want in a property called 'data'
-        console.log(response.data); //we are expecting to see the array of the mentor info I believe, need to test. referrencing can-of-books full demo 06-10-22 at 1:00:00 - 1:06:46, MQR(06-21-22)
-        this.setState({ userInfo: response.data });
-      }
+      const config = {
+        // headers: { "Authorization": `Bearer ${jwt}` },
+        method: 'get',
+        // baseURL: process.env.REACT_APP_SERVER,
+        baseURL: 'http://localhost:3001',
+        url: '/userInfo?type=mentor'//this might need to be changed to /users 
+      };
+      console.log(config);
+      const response = await axios(config);
+      console.log(response.data);
+      this.setState({ userInfo: response.data });
+      // }
     } catch (error) {
       console.error('Error in SignUp componentDidMount function: ', error);
     }
@@ -83,10 +82,10 @@ class User extends React.Component {
 
 
 
-  closeBookFormModal = () => this.setState({ showForm: false });
+  // closeBookFormModal = () => this.setState({ showForm: false });
   //pass the info as props to this user component.
   render() {
-
+    console.log(this.state);
     return (
       <>
         {this.state.userInfo.length > 0 ? (
@@ -102,13 +101,13 @@ class User extends React.Component {
                 <Carousel.Caption id="carousel-text">
                   <h3 className="carousel-text">{user.firstName}</h3>
                   <p className="carousel-text">{user.interest}</p>
-                  <Button >Schedule</Button>
+                  <Button>Schedule</Button>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>
         ) : (
-          <h3>No user Found :(</h3>
+          <h3>No User Found :(</h3>
         )}
       </>
     );

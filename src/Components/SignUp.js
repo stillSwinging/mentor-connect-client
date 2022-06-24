@@ -34,7 +34,8 @@ class SignUp extends React.Component {
   // };
   handleSubmit = (event) => {
     event.preventDefault();
-    window.location.assign(`${process.env.REACT_APP_REDIRECT}`);
+    // window.location.assign(`${process.env.REACT_APP_REDIRECT}`);
+    window.location.assign('/user');
   };
 
 
