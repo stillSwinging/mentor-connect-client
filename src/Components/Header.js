@@ -20,15 +20,21 @@ class Header extends React.Component {
             <Nav.Link className="text" href='/about'>About Us</Nav.Link>
             <Nav.Link className="text" href='/mission'>Our Mission</Nav.Link>
             <Nav.Link className="text" href='/signup'>Sign Up</Nav.Link>
-            <Nav.Link className="text" href='/User'>User</Nav.Link>
+            {this.props.auth0.isAuthenticated ?
+              <>
+                <Nav.Link className="text" href='/User'>User</Nav.Link>
+                <Profile />
+                <Logout />
+              </>
+              :
+              <>
+                <Login />
+              </>
+
+            }
           </Nav>
 
         </Container>
-        <>
-          <Login />
-          <Logout />
-          <Profile />
-        </>
       </Navbar>
     );
   }

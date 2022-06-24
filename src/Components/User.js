@@ -48,6 +48,41 @@ class User extends React.Component {
   };
 
 
+
+
+  // createUser = async (newUser) => {
+  //   console.log(process.env.REACT_APP_SERVER);
+  //   try {
+
+  //     if (this.props.auth0.isAuthenticated) {
+  //       const res = await this.props.auth0.getIdTokenClaims();
+  //       const jwt = res.__raw;
+  //       console.log('token: ', jwt);
+
+  //       const config = {
+  //         headers: { "Authorization": `Bearer ${jwt}` },
+  //         method: 'post',
+  //         baseURL: process.env.REACT_APP_SERVER,
+  //         url: '/userInfo?type=mentor',//this might need to be changed to /users 
+  //         data: newUser
+
+  //       };
+  //       console.log(config);
+  //       const response = await axios(config);
+  //       // axios gives us what we want in a property called 'data'
+  //       console.log(response.data);
+
+  //       const newUserArr = [...this.state.userInfo, response.data];
+  //       this.setState({ userInfo: newUserArr });
+  //     }
+  //   } catch (error) {
+  //     console.error('Error in SignUp componentDidMount function: ', error);
+  //   }
+  // };
+
+
+
+
   closeBookFormModal = () => this.setState({ showForm: false });
   //pass the info as props to this user component.
   render() {
