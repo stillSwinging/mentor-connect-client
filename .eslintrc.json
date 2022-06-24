@@ -3,7 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module",
-    "ecmaFeatures":"jsx"
+    "ecmaFeatures": "jsx"
   },
   "env": {
     "es6": true,
