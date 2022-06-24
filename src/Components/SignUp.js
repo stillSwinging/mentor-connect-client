@@ -1,6 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
+
 // import { useState } from 'react';
 
 
@@ -8,14 +9,9 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: {},
+
     };
   }
-
-
-
-  //  I STARTED THIS, BUT IM NOT CONNECT TO MONGO DB SO I CANT TEST IT. LEFT NOTES BELOW.(MQR)
-
 
 
   // redirecting. this would go inside the callback function enter this at the END of function.
@@ -36,13 +32,18 @@ class SignUp extends React.Component {
   //     setValidated(true);
   //   };
   // };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    window.location.assign(`${process.env.REACT_APP_REDIRECT}`);
+  };
 
 
 
   render() {
+
     return (
       <>
-        <Form onSubmit={this.submitForm}>
+        <Form onSubmit={this.handleSubmit}>
           {/* // noValidate validated={validated} onSubmit={handleSubmit}> */}
           <Row className="mb-3">
             <Form.Select aria-label="Default select example">
@@ -108,8 +109,8 @@ class SignUp extends React.Component {
               <option value="3">Eastern</option>
             </Form.Select>
           </Row>
-          <Button type="submit">Generate an Avatar</Button>
           <Button type="submit">Submit form</Button>
+          <Button type="submit">Generate an Avatar</Button>
         </Form>
       </>
     );
@@ -118,3 +119,17 @@ class SignUp extends React.Component {
 
 
 export default SignUp;
+
+
+
+// /  const newUser = {
+// firstName: event.target.firstName.value,
+//   lastName: event.target.lastName.value,
+//     email: event.target.email.value,
+//       interest: event.target.interest.value,
+//         timeZone: event.target.timeZone.value
+
+//     };
+// console.log(newUser);
+
+// this.props.createUser(newUser);

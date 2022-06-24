@@ -16,6 +16,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // keep header and footer outside of the route if you want your header to show up on every pages, do not wrap it in a route
 // in order to keep the body and the simple.js in a route tag with a route to tell it which route that component should render
 
+
+
 class App extends React.Component {
 
   constructor(props) { // I think this constructor actually belongs on the userInfo card that MQR is coding. Move as appropriate. (VP 6/19/2022)
@@ -88,6 +90,7 @@ class App extends React.Component {
             path="/signup"
             element={<SignUp
               handleChange={this.handleChange}
+
             />} />
           <Route
             path="/user"
