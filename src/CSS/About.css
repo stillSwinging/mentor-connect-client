@@ -8,17 +8,10 @@ h1{
  text-align: center;
  font-style: normal;
  margin-bottom: 200px;
+padding: 40px;
+padding-bottom: 5px;
  
 }
-#martha{
-  background-color: lavender;
-}
-#sarah{
-  background-color: lavender;
-}
-#vida{
-  background-color:lavender;
-}
-#tanesha{
+#Team{
   background-color: lavender;
 }
