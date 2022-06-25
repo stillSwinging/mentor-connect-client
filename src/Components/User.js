@@ -82,16 +82,16 @@ class User extends React.Component {
                     <h3 className="carousel-text">{user.firstName}</h3>
                     <p className="carousel-text">{user.interest}</p>
                     {/* <Button onClick={this.PopupWidget}>Schedule NOW</Button> */}
-                    {/* <PopupWidget
+                    <PopupWidget
                       url='https://calendly.com/mentor-connect'
                       rootElement={document.getElementById('root')}
                       text='Schedule'
                       textColor='#ffffff'
                       color='#00a2ff'
-                    /> */}
-                    <div className="App">
+                    />
+                    {/* <div className="App">
                       <InlineWidget url="https://calendly.com/your_scheduling_page" />
-                    </div>
+                    </div> */}
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}
