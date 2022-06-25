@@ -1,8 +1,8 @@
 import React from 'react';
 import { Figure } from 'react-bootstrap';
-import './Body.css';
 import 'react-bootstrap/Figure';
-//import FigureCaption from 'react-bootstrap/FigureCaption'
+// import Figure from 'react-bootstrap/Figure'
+import '../CSS/Body.css';
 
 class Body extends React.Component {
   render() {
