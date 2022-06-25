@@ -67,3 +67,7 @@ background-color: rgb(130, 160, 160);
   color: black;
   font-weight: bold;
 }
+
+#signUpForm {
+  margin-top: 7%;
+}
