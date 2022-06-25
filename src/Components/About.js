@@ -9,9 +9,9 @@ class About extends React.Component { // creating AboutUs react class component 
       <>
         <h1>Team stillSwinging </h1>
         <CardGroup className='about'>
-          <Card>
-            <Card.Img className='about' variant="top" src="Images/Martha.jpeg" />
-            <Card.Body>
+          <Card className='martha'>
+            <Card.Img className='about' id='martha' variant="top" src="Images/Martha.jpeg" />
+            <Card.Body className=''>
               <Card.Title>Martha Quintanilla-Ramirez</Card.Title>
               <Card.Text>
                 My name is Martha Quintanilla-Ramirez; I’m 28 years old. I am a software developer with a finance background in Seattle, WA! Before switching careers, I worked for a credit union where I was a Retail Experience Support Specialist. I assisted over 100 personal bankers where I utilized my problem-solving skills and attention to detail with complex transactions. While this field has taught me a lot and has been rewarding, I wanted shift careers and become a software developer to challenge myself. I want to showcase that I can succeed in the tech world and break down any myths/stereotypes regarding females in the tech industry. It is important to me to bring diversity to any team I work with to empower people from all walks of life. Technology is evolving rapidly, and I want to be a part of the growth and contribute in any way I can.
@@ -22,7 +22,7 @@ class About extends React.Component { // creating AboutUs react class component 
             </Card.Footer> */}
           </Card>
           <Card>
-            <Card.Img className='about' variant="top" src="Images/Sarah.jpeg" />
+            <Card.Img className='about' id='sarah' variant="top" src="Images/Sarah.jpeg" />
             <Card.Body>
               <Card.Title>Sarah Teklemariam</Card.Title>
               <Card.Text>
@@ -34,7 +34,7 @@ class About extends React.Component { // creating AboutUs react class component 
             </Card.Footer> */}
           </Card>
           <Card>
-            <Card.Img className='about' variant="top" src="Images/Vida.jpg" />
+            <Card.Img className='about' id='vida' variant="top" src="Images/Vida.jpg" />
             <Card.Body>
               <Card.Title>Vida Powell</Card.Title>
               <Card.Text>
@@ -46,7 +46,7 @@ class About extends React.Component { // creating AboutUs react class component 
             </Card.Footer> */}
           </Card>
           <Card>
-            <Card.Img className='about' variant="top" src="holder.js/100px160" />
+            <Card.Img className='about' id='tanesha' variant="top" src="Images/Tanesha.jpg" />
             <Card.Body>
               <Card.Title>Tanesha Brester</Card.Title>
               <Card.Text>
