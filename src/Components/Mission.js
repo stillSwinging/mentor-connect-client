@@ -11,7 +11,7 @@ class Mission extends React.Component {
       <div id="statementsection">
 
         <h2>Our Mission</h2>
-        <Card.Body>
+        <Card.Body >
           <Card.Title></Card.Title>
           <div class='statement1'></div>
           <Card.Text>
