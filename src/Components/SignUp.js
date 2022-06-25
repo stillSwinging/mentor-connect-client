@@ -1,6 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col, Container } from 'react-bootstrap';
+import '../CSS/SignUp.css';
 
 // import { useState } from 'react';
 
@@ -49,6 +50,7 @@ class SignUp extends React.Component {
 
     return (
       <>
+
         <Container>
           <Form onSubmit={this.handleSubmit} id="signUpForm">
             {/* // noValidate validated={validated} onSubmit={handleSubmit}> */}
@@ -94,6 +96,7 @@ class SignUp extends React.Component {
                   onChange={(event) => this.setState({ email: event.target.value })} />
               </Form.Group>
             </Row>
+
             <Form.Group as={Col} md="4" controlId="validationCustom01">
               <Form.Label>Year of Birth</Form.Label>
               <Form.Control
