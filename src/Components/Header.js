@@ -5,24 +5,34 @@ import '../CSS/Header.css';
 import Login from '../auth/Login';
 import Logout from '../auth/Logout';
 import Profile from '../auth/Profile';
+import { Link } from "react-router-dom";
 import { withAuth0 } from '@auth0/auth0-react';
 
 
 class Header extends React.Component {
   render() {
     return (
-      <Navbar className="header" bg="light" expand="lg" >
+      <Navbar className="header" bg="#003b49" expand="lg" >
         <Container>
-          <Navbar.Brand className="headerLetter" href="/home">Mentor Matcher</Navbar.Brand>
-          <Navbar.Toggle />
+          <Link className="logo" to='/home'>MentorConnect</Link>
           <Nav className="nav-menu">
-            <Nav.Link className="text" href='/home'>Home</Nav.Link>
-            <Nav.Link className="text" href='/about'>About Us</Nav.Link>
-            <Nav.Link className="text" href='/mission'>Our Mission</Nav.Link>
-            <Nav.Link className="text" href='/signup'>Sign Up</Nav.Link>
+            <li>
+              <Link className="text" to='/home'>Home</Link>
+            </li>
+            <li>
+              <Link className="text" to='/about'>About Us</Link>
+            </li>
+            <li>
+              <Link className="text" to='/mission'>Our Mission</Link>
+            </li>
+            <li>
+              <Link className="text" to='/signup'>Sign Up</Link>
+            </li>
             {this.props.auth0.isAuthenticated ?
               <>
-                <Nav.Link className="text" href='/User'>User</Nav.Link>
+                <li>
+                  <Link className="text" to='/User'>User</Link>
+                </li>
                 <Profile />
                 <Logout />
               </>
@@ -61,7 +71,7 @@ export default withAuth0(Header);
 //             <Link href='/OurMission'>Our Mission</Link>
 //           </li>
 //           <li>
-//             <Link to='/GetStarted'>Get Started</Link>
+//             <Link href='/signup'>Get Started</Link>
 //           </li>
 //           <li>
 //             <Link to='/AboutUs'>About Us</Link>
