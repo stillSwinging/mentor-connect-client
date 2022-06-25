@@ -22,26 +22,26 @@ class User extends React.Component {
 
 
   componentDidMount = async () => {
-    console.log(this.props.auth0);
+    console.log("isAuthenticated? ", this.props.auth0);
     try {
 
-      // if (this.props.auth0.isAuthenticated) {
-      //   const res = await this.props.auth0.getIdTokenClaims();
-      //   const jwt = res.__raw;
-      //   console.log('token: ', jwt);
+      if (this.props.auth0.isAuthenticated) {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+        console.log('token: ', jwt);
 
-      const config = {
-        // headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'get',
-        // baseURL: process.env.REACT_APP_SERVER,
-        baseURL: 'http://localhost:3001',
-        url: '/userInfo?type=mentor'
-      };
-      console.log(config);
-      const response = await axios(config);
-      console.log(response.data);
-      this.setState({ userInfo: response.data });
-      // }
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          method: 'get',
+          baseURL: process.env.REACT_APP_SERVER,
+          // baseURL: 'http://localhost:3001',
+          url: '/userInfo?type=mentor'
+        };
+        console.log(config);
+        const response = await axios(config);
+        console.log(response.data);
+        this.setState({ userInfo: response.data });
+      }
     } catch (error) {
       console.error('Error in SignUp componentDidMount function: ', error);
     }
@@ -72,7 +72,7 @@ class User extends React.Component {
           <>
             <Carousel fade={true} pause={false} className="height">
               {this.state.userInfo.map(user => (
-  
+
                 <Carousel.Item key={user._id} interval={6000}>
 
                   <img
@@ -82,7 +82,7 @@ class User extends React.Component {
                     alt="First slide"
                   />
                   <Carousel.Caption id="carousel-text">
-                    <Image src={'http://api.multiavatar.com/'+user.firstName+'.png'} width="100px" />
+                    <Image src={'http://api.multiavatar.com/' + user.firstName + '.png'} width="100px" />
                     <h3 className="carousel-text">{user.firstName}</h3>
                     <p className="carousel-text">{user.interest}</p>
                     {/* <Button onClick={this.PopupWidget}>Schedule NOW</Button> */}

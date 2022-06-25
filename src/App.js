@@ -11,6 +11,8 @@ import User from './Components/User';
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { withAuth0 } from '@auth0/auth0-react';
+
 
 // comments from Tanesha Brester
 // keep header and footer outside of the route if you want your header to show up on every pages, do not wrap it in a route
@@ -23,6 +25,7 @@ class App extends React.Component {
   constructor(props) { // I think this constructor actually belongs on the userInfo card that MQR is coding. Move as appropriate. (VP 6/19/2022)
     super(props);
     this.state = {
+      userInfo: [],
       resultingUserList: [], // (VP 6/19/2022)
       firstName: '',
       lastName: '',
@@ -60,29 +63,29 @@ class App extends React.Component {
   };
 
   createUser = async (newUser) => {
-    console.log(process.env.REACT_APP_SERVER);
+    console.log("New user coming into createUser function on App.js: ", newUser);
     try {
 
-      // if (this.props.auth0.isAuthenticated) {
-      //   const res = await this.props.auth0.getIdTokenClaims();
-      //   const jwt = res.__raw;
-      //   console.log('token: ', jwt);
+      if (this.props.auth0.isAuthenticated) {
+        const res = await this.props.auth0.getIdTokenClaims();
+        const jwt = res.__raw;
+        console.log('token: ', jwt);
 
-      const config = {
-        // headers: { "Authorization": `Bearer ${jwt}` },
-        method: 'post',
-        baseURL: process.env.REACT_APP_SERVER,
-        data: newUser,
-        url: '/userInfo/'
-      };
+        const config = {
+          headers: { "Authorization": `Bearer ${jwt}` },
+          method: 'post',
+          baseURL: process.env.REACT_APP_SERVER,
+          data: newUser,
+          url: '/userInfo/'
+        };
 
-      console.log(config);
-      const response = await axios(config);
-      // axios gives us what we want in a property called 'data'
-      console.log(response.data);
-      // const newUserArr = [...this.state.userInfo, response.data];
-      // this.setState({ userInfo: newUserArr });
-
+        console.log("Config Object: ", config);
+        const response = await axios(config);
+        // axios gives us what we want in a property called 'data'
+        console.log(response.data);
+        const newUserArr = [...this.state.userInfo, response.data];
+        this.setState({ userInfo: newUserArr });
+      }
     } catch (error) {
       console.error('Error in SignUp componentDidMount function: ', error);
     }
@@ -132,4 +135,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default withAuth0(App);
