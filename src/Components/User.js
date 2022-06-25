@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 import axios from 'axios';
 // import Image from 'react-bootstrap/Image';
 // import axios from 'axios';
@@ -71,7 +72,9 @@ class User extends React.Component {
           <>
             <Carousel fade={true} pause={false} className="height">
               {this.state.userInfo.map(user => (
+  
                 <Carousel.Item key={user._id} interval={6000}>
+
                   <img
                     id='image'
                     className="w-100"
@@ -79,9 +82,11 @@ class User extends React.Component {
                     alt="First slide"
                   />
                   <Carousel.Caption id="carousel-text">
+                    <Image src={'http://api.multiavatar.com/'+user.firstName+'.png'} width="100px" />
                     <h3 className="carousel-text">{user.firstName}</h3>
                     <p className="carousel-text">{user.interest}</p>
                     {/* <Button onClick={this.PopupWidget}>Schedule NOW</Button> */}
+
                     <PopupWidget
                       url='https://calendly.com/mentor-connect'
                       rootElement={document.getElementById('root')}
@@ -89,6 +94,7 @@ class User extends React.Component {
                       textColor='#ffffff'
                       color='#00a2ff'
                     />
+
                     {/* <div className="App">
                       <InlineWidget url="https://calendly.com/your_scheduling_page" />
                     </div> */}
