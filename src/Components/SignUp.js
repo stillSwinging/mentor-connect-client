@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
-
+import '../CSS/SignUp.css';
 // import { useState } from 'react';
 
 
@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
     return (
       <>
-        <Form onSubmit={this.handleSubmit}>
+        <Form className='form' onSubmit={this.handleSubmit}>
           {/* // noValidate validated={validated} onSubmit={handleSubmit}> */}
           <Row className="mb-3">
             <Form.Select
