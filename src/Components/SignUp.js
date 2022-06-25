@@ -54,7 +54,7 @@ class SignUp extends React.Component {
     };
     console.log(newUser);
     this.props.createUser(newUser);
-    // window.location.assign('/user');  --testing copied this over to the createUser method on App.js
+    window.location.assign('/user'); 
   };
 
   render() {
@@ -69,8 +69,8 @@ class SignUp extends React.Component {
               onChange={(event) => this.setState({ type: event.target.value })}
             >
               <option>I am registering as...</option>
-              <option value="1">Student</option>
-              src/Components/SignUp.js              <option value="2">Mentor</option>
+              <option value="student">Student</option>
+              src/Components/SignUp.js              <option value="mentor">Mentor</option>
             </Form.Select>
 
             <Form.Group as={Col} md="4" controlId="validationCustom01">
