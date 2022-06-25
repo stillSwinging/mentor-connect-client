@@ -1,7 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
-
+import '../CSS/SignUp.css';
 // import { useState } from 'react';
 
 
@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
     return (
       <>
-        <Form onSubmit={this.handleSubmit}>
+        <Form className='form' onSubmit={this.handleSubmit}>
           {/* // noValidate validated={validated} onSubmit={handleSubmit}> */}
           <Row className="mb-3">
             <Form.Select
@@ -79,7 +79,10 @@ class SignUp extends React.Component {
                 required
                 type="text"
                 placeholder="First name"
-                onChange={(event) => this.setState({ firstName: event.target.value })}
+                onChange={(event) => this.setState({
+                  firstName: event.target.value,
+                  avatar: 'http://api.multiavatar.com/' + event.target.value + '.png'
+                })}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -124,18 +127,15 @@ class SignUp extends React.Component {
           <Row className="mb-3">
             <Form.Select
               aria-label="Default select example"
-              onChange={(event) => this.setState({ timeZone: event.target.value })}
-            >
-
+              onChange={(event) => this.setState({ timeZone: event.target.value })}>        
               <option>Time Zone</option>
-              <option value="1">Pacific</option>
-              <option value="2">Mountain</option>
-              <option value="3">Central</option>
-              <option value="3">Eastern</option>
+              <option value="Pacific">Pacific</option>
+              <option value="Mountain">Mountain</option>
+              <option value="Central">Central</option>
+              <option value="Eastern">Eastern</option>
             </Form.Select>
           </Row>
           <Button type="submit">Submit form</Button>
-          <Button type="submit">Generate an Avatar</Button>
         </Form>
       </>
     );
