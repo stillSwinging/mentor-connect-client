@@ -2,7 +2,7 @@ import React from 'react';
 import { Figure } from 'react-bootstrap';
 import 'react-bootstrap/Figure';
 // import Figure from 'react-bootstrap/Figure'
-import "../CSS/Body.css";
+import '../CSS/Body.css';
 
 class Body extends React.Component {
   render() {

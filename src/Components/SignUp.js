@@ -9,10 +9,16 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      firstName: '',
+      lastName: '',
+      email: '',
+      interest: '',
+      timeZone: '',
+      YOB: '',
+      avatar: '',
+      type: ''
     };
   }
-
 
   // redirecting. this would go inside the callback function enter this at the END of function.
   //location.href= '/user';
@@ -32,13 +38,24 @@ class SignUp extends React.Component {
   //     setValidated(true);
   //   };
   // };
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.firstName, this.state.lastName, this.state.email, this.state.YOB, this.state.type, this.state.timeZone);
     // window.location.assign(`${process.env.REACT_APP_REDIRECT}`);
-    window.location.assign('/user');
+    let newUser = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      interest: this.state.interest,
+      timeZone: this.state.timeZone,
+      YOB: this.state.YOB,
+      avatar: this.state.avatar,
+      type: this.state.type
+    };
+    console.log(newUser);
+    this.props.createUser(newUser);
+    // window.location.assign('/user');  --testing copied this over to the createUser method on App.js
   };
-
-
 
   render() {
 
@@ -47,7 +64,10 @@ class SignUp extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           {/* // noValidate validated={validated} onSubmit={handleSubmit}> */}
           <Row className="mb-3">
-            <Form.Select aria-label="Default select example">
+            <Form.Select
+              aria-label="Default select example"
+              onChange={(event) => this.setState({ type: event.target.value })}
+            >
               <option>I am registering as...</option>
               <option value="1">Student</option>
               src/Components/SignUp.js              <option value="2">Mentor</option>
@@ -59,7 +79,7 @@ class SignUp extends React.Component {
                 required
                 type="text"
                 placeholder="First name"
-                onChange={this.props.handleChange}
+                onChange={(event) => this.setState({ firstName: event.target.value })}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -69,7 +89,7 @@ class SignUp extends React.Component {
                 required
                 type="text"
                 placeholder="Last name"
-                onChange={this.props.handleChange}
+                onChange={(event) => this.setState({ lastName: event.target.value })}
               />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
@@ -78,7 +98,7 @@ class SignUp extends React.Component {
               <Form.Control
                 type="email"
                 placeholder="Enter email"
-                onChange={this.props.handleChange} />
+                onChange={(event) => this.setState({ email: event.target.value })} />
             </Form.Group>
           </Row>
           <Form.Group as={Col} md="4" controlId="validationCustom01">
@@ -87,7 +107,7 @@ class SignUp extends React.Component {
               required
               type="text"
               placeholder="Year of Birth"
-
+              onChange={(event) => this.setState({ YOB: event.target.value })}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
@@ -97,12 +117,16 @@ class SignUp extends React.Component {
               required
               type="text"
               placeholder="Interest"
-              onChange={this.props.handleChange}
+              onChange={(event) => this.setState({ interest: event.target.value })}
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           </Form.Group>
           <Row className="mb-3">
-            <Form.Select aria-label="Default select example">
+            <Form.Select
+              aria-label="Default select example"
+              onChange={(event) => this.setState({ timeZone: event.target.value })}
+            >
+
               <option>Time Zone</option>
               <option value="1">Pacific</option>
               <option value="2">Mountain</option>

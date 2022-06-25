@@ -50,7 +50,7 @@ class About extends React.Component { // creating AboutUs react class component 
             <Card.Body>
               <Card.Title>Tanesha Brester</Card.Title>
               <Card.Text>
-                With a diverse employment background, most recently being in healthcare, I decided to follow my dreams and pivot into tech. I went back to school in 2020, and enrolled in CodeFellows 
+                With a diverse employment background, most recently being in healthcare, I decided to follow my dreams and pivot into tech. I went back to school in 2020, and enrolled in CodeFellows
               </Card.Text>
             </Card.Body>
             {/* <Card.Footer>

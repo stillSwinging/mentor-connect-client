@@ -106,6 +106,7 @@ Established [Trello Workspace: ](https://trello.com/b/7wHAjz2V/) (ST)
 * David Souther, Remo TA - with thanks for helping us resolve gituations and provided insight on package-lock.json update frequency and how this is commonly causes errors during deployment!
 * Audrey Patterson, CF Instructor - with thanks for explaining some of the auto-generated code blocks and how they fit together with what we are building out
 * Aaron Imbrock, Remo TA - with thanks for pointing out when trying to seed a MongoDB (in our case the userInfoSeed.js), fields that are set to "required: true" MUST have data in the quotes. 
+* Ben Mills, Remo TA - with EXTREME thanks for extraordinary patience and assistance helping the backend coder bug hunt on frontend
 
 
 ## Time Estimates

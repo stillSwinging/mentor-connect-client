@@ -9,7 +9,7 @@ class Mission extends React.Component {
     return (
       // parent element needed for jsx (i just used fragments)
       <div id="statementsection">
-       
+
         <h2>Our Mission</h2>
         <Card.Body>
           <Card.Title></Card.Title>
